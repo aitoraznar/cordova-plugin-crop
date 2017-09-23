@@ -44,7 +44,8 @@ public class CropPlugin extends CordovaPlugin {
                         .setGuidelines(CropImageView.Guidelines.ON)
                         .setCropShape(CropImageView.CropShape.RECTANGLE)
                         .setRequestedSize(imgWidth, imgWidth)
-                        .setFixAspectRatio(true)
+                        .setCropMenuCropButtonTitle("OK")
+                        //.setFixAspectRatio(true)
                         .start(cordova.getActivity());
           return true;
       }

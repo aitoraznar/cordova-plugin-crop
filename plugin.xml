@@ -2,7 +2,7 @@
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
   xmlns:android="http://schemas.android.com/apk/res/android"
   id="cordova-plugin-crop"
-  version="0.3.1">
+  version="0.5.0">
 
   <name>CropPlugin</name>
 
@@ -55,9 +55,9 @@
       </feature>
     </config-file>
 
-    <framework src="src/android/refer.gradle" custom="true" type="gradleReference" />
-
-    <!--<resource-file src="lib/android-crop-release.aar" target="libs/android-crop-release.aar" />-->
+    <!--<framework src="src/android/refer.gradle" custom="true" type="gradleReference" />-->
+    <framework src="src/android/build.gradle" custom="true" type="gradleReference" />
+    <resource-file src="src/android/lib/android-crop-release.aar" target="libs/android-crop-release.aar" />
 
     <config-file target="AndroidManifest.xml" parent="/manifest/application">
       <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

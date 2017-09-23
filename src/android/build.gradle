@@ -1,0 +1,25 @@
+repositories {
+
+  mavenLocal()
+  mavenCentral()
+  maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+  maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+  jcenter()
+
+  flatDir {
+      dirs 'libs' //this way we can find the .aar file in libs folder
+  }
+}
+
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile "com.android.support:exifinterface:25.3.1"
+    compile(name:'android-crop-release', ext:'aar')
+}
+
+android {
+  packagingOptions {
+    exclude 'META-INF/NOTICE'
+    exclude 'META-INF/LICENSE'
+  }
+}
